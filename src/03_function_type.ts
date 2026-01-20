@@ -16,6 +16,7 @@ print1('홍길동', 20);
 
 // 필수 파라미터가 선택적 파라미터보다 뒤에 작성되면 안된다.
 function print2(name: string, age?: number, gender: string): void {
+    console.log(`${name}: ${age}: ${gender}`);
 }
 
 // -------------------------------
