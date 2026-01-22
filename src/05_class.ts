@@ -55,3 +55,26 @@ class Whale {
 }
 const whale1: Whale = new Whale('라분');
 const whale2: Whale = new Whale('상쾡이');
+
+// ------------------------------
+// 접근 제어 지시자
+class Cat {
+    // public: class 내외부 어디에서나 접근 가능(기본값)
+    // private: class 내부에서만 접근 가능
+    // protected: class 내부 또는 자식클래스에서만 접근이 가능
+    num1: number = 1;
+    public num2: number = 2;
+    private num3: number = 3;
+    protected num4: number = 4;
+}
+const cat: Cat = new Cat();
+cat.num1;
+cat.num2;
+// cat.num3; // error
+// cat.num4; // error
+
+class CatChild extends Cat {
+    test(): void {
+        this.num4;
+    }
+}
